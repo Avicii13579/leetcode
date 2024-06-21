@@ -1,7 +1,7 @@
 /*
  * @lc app=leetcode.cn id=704 lang=javascript
  *
- * [704] 二分查找
+ * [704] 二分查找 前提：数组有序且无重复元素
  */
 
 // @lc code=start
@@ -29,9 +29,10 @@
 // };
 
 var search = function(nums, target) {
-    let left =0, right =nums.length-1;
+    let mid = 0,left =0, right =nums.length-1;
     while (left <= right) {
-        let mid = Math.floor((right - left) / 2) + left
+        // 位运算 防止加和后溢出 只取整数
+         mid = left + ((right - left) >> 1)
         if (nums[mid] > target) {  
             // 目标元素在左边
             right = mid - 1
