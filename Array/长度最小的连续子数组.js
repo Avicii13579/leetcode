@@ -2,7 +2,7 @@
  * @lc app=leetcode.cn id=209 lang=javascript
  *
  * [209] 长度最小的子数组
- */5
+ */
 
 // @lc code=start
 /**

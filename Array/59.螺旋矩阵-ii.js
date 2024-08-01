@@ -1,7 +1,7 @@
 /*
  * @lc app=leetcode.cn id=59 lang=javascript
  *
- * [59] 螺旋矩阵 II 1、循环边界判断 2、矩阵行数奇偶处理 3
+ * [59] 螺旋矩阵 II 1、循环边界判断 2、矩阵行数奇偶处理 
  */
 
 // @lc code=start
