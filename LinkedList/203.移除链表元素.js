@@ -2,6 +2,11 @@
  * @lc app=leetcode.cn id=203 lang=javascript
  *
  * [203] 移除链表元素
+ * 思路：
+ *  1、创建一个虚拟头节点，next 指向原链表的头节点；创建一个指针 current 指向新的头节点
+ *  2、当指针 current 指向的节点的 next 存在，判断 current.next.val 是否等于 val，若相等，则将 current.next 指向 current.next.next，否则，将 current 指向 current.next
+ *  3、返回新的头节点的 next 节点
+ *  4、时间复杂度：O(n) 空间复杂度：O(1)
  */
 
 // @lc code=start
