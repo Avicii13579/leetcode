@@ -21,7 +21,7 @@
  * @return {number}
  */
 
-// 深度优先
+// 深度优先 时间复杂度O(n) n为节点数，空间复杂度为 O(h) h为树的高度
 // var maxDepth = function (root) {
 //   if (!root) {
 //     return 0;
@@ -33,7 +33,7 @@
 //   return Math.max(leftDepth, rightDepth) + 1;
 // };
 
-// 广度优先
+// 广度优先 时间复杂度O(n) n为节点数，空间复杂度为 O(w) w为最大一层的节点数量
 var maxDepth = function (root) {
   if (!root) {
     return 0;
