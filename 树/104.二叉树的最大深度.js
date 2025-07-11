@@ -44,7 +44,7 @@ var maxDepth = function (root) {
   let depth = 0;
 
   while (queue.length > 0) {
-    // 当前节点的数量
+    // 当前层次节点的数量
     const levelSize = queue.length;
 
     for (let i = 0; i < levelSize; i++) {
