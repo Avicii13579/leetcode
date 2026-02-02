@@ -1,0 +1,9 @@
+{
+  "name": "promise-demo",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "start": "ts-node promise.ts"
+  }
+}
+

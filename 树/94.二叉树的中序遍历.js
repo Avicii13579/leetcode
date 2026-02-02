@@ -24,17 +24,41 @@
 //         ...inorderTraversal(root.right)
 //     ]: []
 // };
+
+// 方法一：递归
+// var inorderTraversal = function (root) {
+//   let res = [];
+//   const dfs = function (root) {
+//     // 边界控制
+//     if (root === null) return;
+//     dfs(root.left);
+//     res.push(root.val);
+//     dfs(root.right);
+//   };
+
+//   dfs(root);
+//   return res;
+// };
+
+// 方法二：迭代
 var inorderTraversal = function (root) {
   let res = [];
-  const dfs = function (root) {
-    // 边界控制
-    if (root === null) return;
-    dfs(root.left);
-    res.push(root.val);
-    dfs(root.right);
-  };
+  const stack = []; // 将遍历节点存到栈中，实现后进先出
+  let current = root;
 
-  dfs(root);
+  while (current || stack.length > 0) {
+    // 优先入栈左子树
+    while (current) {
+      stack.push(current);
+      current = current.left;
+    }
+
+    // 从最后一个左子树开始处理
+    current = stack.pop();
+    res.push(current.val);
+    current = current.right;
+  }
+
   return res;
 };
 // @lc code=end
