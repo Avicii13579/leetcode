@@ -47,6 +47,7 @@ var maxDepth = function (root) {
     // 当前层次节点的数量
     const levelSize = queue.length;
 
+    // 求深度/层数/步数： 必须用 内层循环 (levelSize)，为了把节点按“层”隔开。
     for (let i = 0; i < levelSize; i++) {
       const node = queue.shift(); // 节点出队
 
